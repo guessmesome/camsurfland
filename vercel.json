@@ -1,0 +1,23 @@
+{
+  "buildCommand": "node scripts/build.mjs",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "functions": {
+    "api/analytics.js": {
+      "includeFiles": "server/**",
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/analytics", "destination": "/api/analytics" },
+    { "source": "/analytics/", "destination": "/api/analytics" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}

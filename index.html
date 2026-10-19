@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>CamSurf</title>
+    <link rel="preload" href="./media/slide1.webp" as="image" type="image/webp">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="onboarding" id="onboarding">
+        <div class="visual-area">
+            <img
+                class="slide-image"
+                id="slideImage"
+                src="./media/slide1.webp"
+                width="804"
+                height="1748"
+                alt=""
+            >
+        </div>
+
+        <div class="bottom-panel">
+            <div class="actions">
+                <label class="sr-only" for="emailInput">Email</label>
+                <input
+                    id="emailInput"
+                    class="email-input"
+                    name="email"
+                    type="email"
+                    inputmode="email"
+                    autocomplete="email"
+                    placeholder="Enter your mail"
+                    spellcheck="false"
+                    hidden
+                >
+                <p class="error-message" id="errorMessage" role="alert" aria-live="polite"></p>
+                <button class="primary-button" id="continueBtn" type="button">Continue</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="loading-overlay" id="loadingOverlay" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script src="./analytics.js?v=20261019"></script>
+    <script src="./script.js?v=20261019"></script>
+</body>
+</html>
